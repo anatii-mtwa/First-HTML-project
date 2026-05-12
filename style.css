@@ -1,0 +1,742 @@
+/* ======================================================
+   GLOBAL PAGE STYLES
+   These styles affect the whole website
+====================================================== */
+
+body{
+background-image: url(Pic.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ======================================================
+   LOGO ANIMATION
+   Controls movement of the floating logo
+====================================================== */
+
+@keyframes moveLogo{
+
+    0%{
+        top: 10%;
+        left: -100px;
+    }
+
+    50%{
+        top: 40%;
+        left: 80%;
+    }
+
+    100%{
+        top: 70%;
+        left: -100px;
+    }
+}
+.corner-logo{
+
+    position: fixed;
+
+    top: 15px;
+
+
+
+    width: 55px;
+
+    opacity: 0.9;
+
+    z-index: 1000;
+}
+
+nav{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 40px;
+
+    background-color: rgba(0,0,0,0.4);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.logo-section{
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+
+.top-logo{
+
+    width: 50px;
+
+    margin-right: 5px;
+}
+
+nav h1{
+
+    color: #FF8C00;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li{
+
+    margin-left: 20px;
+}
+
+nav ul li a{
+
+    color: white;
+
+    text-decoration: none;
+
+    background-color: rgba(255,255,255,0.15);
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover{
+
+    background-color: #FF8C00;
+
+    color: white;
+}
+
+.hero{
+
+    height: 100vh;
+
+    background-color: #002F6C;
+
+    position: relative;
+}
+
+.hero-content{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -20%);
+
+    text-align: center;
+
+    color: white;
+
+    z-index: 5;
+
+    width: 100%;
+}
+
+.hero-content h2{
+
+    font-size: 50px;
+}
+
+.hero-content p{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+.explore-btn{
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background-color: orange;
+
+    color: white;
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+    border: 2px solid #003B88;
+
+    transition: 0.3s;
+}
+
+
+.explore-btn:hover{
+
+    background-color: #003B88;
+
+    border-color: orange;
+
+    transform: scale(1.05);
+}
+
+.student-area{
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 80px 50px;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.student-area h2{
+
+    color: white;
+
+    font-size: 45px;
+
+    margin-bottom: 50px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.card-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.student-card{
+
+    background-color: whitesmoke;
+
+    width: 250px;
+
+    min-height: 280px;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.card-btn{
+    display: inline-block;
+    padding: 12px 25px;
+
+    background-color: #FF8C00;   /* ORANGE */
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card-btn:hover{
+    background-color: #003B88;  /* dark blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+
+.student-card h3{
+
+    color: #003B88;
+
+    font-size: 24px;
+}
+
+.student-card p{
+
+    color: #333;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+.emergency-card-style{
+    border: 2px solid #FF8C00;
+}
+
+/* ======================================================
+   QUICK LINKS TITLE STYLE
+====================================================== */
+
+h1{
+    color: #FF8C00;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ======================================================
+   QUICK LINKS DESCRIPTION TEXT
+====================================================== */
+
+p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ======================================================
+    BUTTONS / QUICK LINKS
+====================================================== */
+a{text-decoration: none;}
+.btn-rollout{
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: white;
+
+    color: #003B88;
+
+    border-radius: 30px;
+
+    border: 2px solid #003B88;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+
+/* ======================================================
+    BUTTON HOVER
+====================================================== */
+
+.btn-rollout:hover{
+
+    background-color: #FF8C00;
+
+    color: white;
+
+    border-color: #FF8C00;
+
+    transform: scale(1.05);
+}
+
+/* ======================================================
+   STUDY PAGE HEADER
+====================================================== */
+
+.page-header{
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    margin-bottom: 40px;
+
+    color: white;
+}
+
+
+
+/* ======================================================
+   HEADER LOGO
+====================================================== */
+
+
+/* ======================================================
+   CORNER LOGO
+   Logo shown on all pages except homepage/dashboard
+====================================================== */
+
+.corner-logo{
+
+    position: fixed;
+
+    top: 15px;
+
+    right: 15px; /* moves logo to right side */
+
+    width: 60px;
+
+    opacity: 0.9;
+
+    z-index: 1000;
+}
+
+
+/* ======================================================
+   STUDY PAGE TITLE
+====================================================== */
+
+.page-header h1{
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+    color: #FF8C00;
+
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+/* ======================================================
+   STUDY PAGE DESCRIPTION
+====================================================== */
+
+.page-header p{
+
+    width: 70%;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: white;
+}
+
+/* ======================================================
+   STUDY MATERIAL BUTTONS
+   Accordion rollout buttons
+====================================================== */
+
+.btn-rollout{
+
+    background: white;
+
+    color: #003B88; /* Makes text visible */
+
+    border: 2px solid #003B88;
+
+    padding: 16px;
+
+    width: 60%;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin: 10px auto;
+
+    display: block;
+}
+
+
+
+/* ======================================================
+   STUDY BUTTON HOVER EFFECT
+====================================================== */
+
+.btn-rollout:hover{
+
+    background: #FF8C00;
+
+    color: white;
+
+    border-color: #FF8C00;
+
+    transform: scale(1.05);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+/* ======================================================
+   TIMETABLE CONTAINER (CARD STYLE)
+====================================================== */
+
+.container{
+    max-width: 1000px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ======================================================
+   TIMETABLE TITLE
+====================================================== */
+
+h1{
+    text-align: center;
+    color: #FF8C00;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ======================================================
+   TABLE BASE STYLE
+====================================================== */
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* ======================================================
+   TABLE HEADER
+====================================================== */
+
+th{
+    background: #001F4D;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+}
+
+/* ======================================================
+   TABLE CELLS
+====================================================== */
+
+td{
+    background: rgba(255,255,255,0.9);
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ======================================================
+   TIMETABLE COLUMN (LEFT SIDE)
+====================================================== */
+
+td:first-child{
+    font-weight: bold;
+    background: #E6F0FF;
+    color: #003B88;
+}
+
+/* ======================================================
+   HOVER EFFECT (ROW HIGHLIGHT)
+====================================================== */
+
+tr:hover td{
+    background: #FFD7A8;
+    transition: 0.3s;
+}
+
+/* ======================================================
+   MODULE DROPDOWN STYLE
+====================================================== */
+
+.module-select{
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* ======================================================
+   CLICK ME ANIMATION BUTTON
+====================================================== */
+
+.study-click{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.study-click button{
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+
+    animation: bounce 1.5s infinite;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* little bounce animation */
+@keyframes bounce{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ======================================================
+   ACCORDION PANELS
+   Hidden content under study buttons
+====================================================== */
+
+.panel{
+
+    background-color: rgba(255,255,255,0.95);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.4s ease-out;
+
+    border-radius: 10px;
+
+    margin: 10px auto;
+
+    width: 80%;
+}
+
+
+
+/* ======================================================
+   PANEL CONTENT
+====================================================== */
+
+.panel-content{
+
+    padding: 20px;
+
+    color: #333;
+
+    line-height: 1.6;
+}
+
+
+
+/* ======================================================
+   BACK TO HOME BUTTON
+====================================================== */
+
+.back-btn{
+
+    display: inline-block;
+
+    margin: 20px;
+
+    padding: 12px 24px;
+
+    background: #FF8C00;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    border: 2px solid #003B88;
+
+    transition: 0.3s;
+}
+
+
+
+/* ======================================================
+   BACK BUTTON HOVER
+====================================================== */
+
+.back-btn:hover{
+
+    background: #FF8C00;
+
+    border-color: #FF8C00;
+
+    transform: scale(1.05);
+}
+
+
+
+/* ======================================================
+   FOOTER SECTION
+====================================================== */
+
+footer{
+
+    background-color: #001F4D;
+
+    color: white;
+
+    padding: 50px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* ======================================================
+   FOOTER HEADINGS
+====================================================== */
+
+footer h3{
+
+    color: #FF8C00;
+}
+
+
+
+/* ======================================================
+   FOOTER TEXT
+====================================================== */
+
+footer p{
+
+    line-height: 1.8;
+}

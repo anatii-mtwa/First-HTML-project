@@ -1,0 +1,104 @@
+body { 
+  	
+    font-family: arial , sans-serif;
+	background-image: url(logo3.jpeg);
+	background-repeat: no-repeat;
+	} 
+	
+   header { 
+            background-color:navy ;
+			color: white;
+		    padding: 1rem 0 ;
+			top: 0;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+   }
+nav button{
+    text-align: center;
+	padding: 15px;
+	border-radius: 10px;
+    height: 10px;
+    background-color: rgba(18, 217, 217, 0.437);
+   }
+   		  
+           
+   nav {
+         max-width : 1200px;
+		 margin:0 auto-fit;
+		 display: flex;
+		 gap:14px;
+		 padding: 1rem;
+   }
+   nav a {
+           text-align: center;
+		   font-weight: 500;
+		   transition: color 0.5s
+   }
+     nav a:hover {
+		 color:aqua;
+		 transition: color 0.2s;
+	 }
+		   
+.container { 
+               
+               max-width:1200px;
+			   margin: 3rem auto;
+			   padding: 0 3rem;
+   }
+   
+.socials {
+				 padding:  100px;
+				 background-color: white;
+				 background-repeat: no-repeat;
+				 display: flex;
+				 font-size: 30px;
+				margin-bottom: 1px;
+				 border-radius: 30px;
+				 margin: 18px;
+	  }
+	  .socials p{
+		font-size: 20px;
+	  }
+	  .section1 h1{
+		color: blue;
+		display: flex;
+		font-size: 70px;
+		text-align: center;
+	  }
+
+	  .socials2{
+		background: transparent;
+	  }
+
+	   h3 , p{
+		   text-align: center;
+		   color: black;
+	   }
+	   
+	   .links-grid {
+           display : grid;
+		   
+		   grid-template-columns: repeat(auto-fit, minmax(100px 1fr));
+		   gap:2rem;
+		   }
+	   .link-card {
+           		   padding: 2rem;
+	               background-color:white;
+	               border: 1px solid black;
+				   border-radius: 20px 40px;				   
+				   text-align: center; 
+				   transition: transform; 
+	   }
+	  
+	   /*.icon { 
+	        font-size: 8rem;
+			margin-bottom: 0.6rem;
+	   }*/
+  footer   { 
+        text-align: center;
+		padding: 5px;
+		background-color: red;
+		color: white;
+		position: sticky;
+   }
+   
+		 

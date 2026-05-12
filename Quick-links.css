@@ -1,0 +1,95 @@
+header{
+    padding: 20px;
+    background-color: transparent;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: whitesmoke;
+    
+}
+
+nav button{
+    text-align: center;
+	padding: 15px;
+	border-radius: 15px;
+    height: 10px;
+    background-color: rgba(18, 217, 217, 0.437);
+   }
+
+
+.Quick-links{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.qr{
+    background-image: url(qr-code.jpeg);
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+    border-radius: 12px;
+    float: right;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 0px;
+    font-size: 30px;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(26, 21, 21, 0.7);
+}
+
+.congratulations h3{
+    color: white;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.welcome{
+    font-size: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: white;
+    text-shadow: 5px 5px 5px rgb(0,0,0,0.7);
+}
+form{
+    border: 2px;
+}
+
+
+body{
+    background-image: url(logo3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.student-card {
+    background-color: whitesmoke;
+    width: 280px;
+    padding: 28px;
+    padding-bottom: 20px;
+    border-radius: 18px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: 14px;
+    color: #0e0b0b;
+    margin-bottom: 5px;
+}
+
+.button{
+    padding: 28px;
+}
+
