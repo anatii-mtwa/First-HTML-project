@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMU Student Hub - Timetable</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <body>
+
+<img src="logo1.png" class="corner-logo" alt="logo">
+
+<div class="container">
+  <img src="logo1.png" class="logo" alt="moving logo">
+  <a href="homepage.html" class="back-btn">← Back to Home</a>
+  <div class="container">
+    <h1>SMU Student Hub Timetable</h1>
+    <div class="controls">
+      <p>Select a module for any time slot in the timetable below.</p>
+    </div>
+    <div class="study-click">
+    <button onclick="playStudySound()">📚 Click me</button>
+</div>
+    <table id="timetable">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="message" id="selectionMessage">Choose a module in the timetable to see your current slot.</div>
+  </div>
+  <script>
+        const timetableBody = document.querySelector('#timetable tbody');
+    const selectionMessage = document.getElementById('selectionMessage');
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    const times = [
+      '7:45-08:25',
+      '08:30-09:10',
+      '09:15-09:55',
+      '10:00-10:40',
+      '10:45-11:25',
+      '11:30-12:10',
+      '12:15-12:55',
+      '13:00-13:40',
+      '13:45-14:25',
+      '14:30-15:10',
+      '15:15-15:55',
+      '16:00-16:40',
+      '16:15-16:55'
+    ];
+    const modules = ['MCOA011', 'MSTS011', 'MMTH011', 'MHEL011', 'MAPM011'];
+
+    function createModuleSelect(day, time) {
+      const select = document.createElement('select');
+      select.className = 'module-select';
+      select.dataset.day = day;
+      select.dataset.time = time;
+
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = 'Select module';
+      placeholder.disabled = true;
+      placeholder.selected = true;
+      select.appendChild(placeholder);
+
+      modules.forEach(moduleCode => {
+        const option = document.createElement('option');
+        option.value = moduleCode;
+        option.textContent = moduleCode;
+        select.appendChild(option);
+      });
+
+      select.addEventListener('change', () => {
+        if (select.value) {
+          selectionMessage.textContent = `${time} ${day}: ${select.value} selected`;
+        }
+      });
+
+      return select;
+    }
+
+    function buildTimetable() {
+      times.forEach(time => {
+        const row = document.createElement('tr');
+        const timeCell = document.createElement('td');
+        timeCell.textContent = time;
+        timeCell.style.fontWeight = '700';
+        row.appendChild(timeCell);
+
+        days.forEach(day => {
+          const cell = document.createElement('td');
+          cell.appendChild(createModuleSelect(day, time));
+          row.appendChild(cell);
+        });
+
+        timetableBody.appendChild(row);
+      });
+    }
+
+    buildTimetable();
+    function playStudySound() {
+      const sound = document.getElementById('studySound');
+      sound.currentTime = 0; // Restart the sound on each click
+      sound.play();
+    }
+  </script>
+  <audio id="studySound">
+    <source src="study.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
