@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMU Dashboard</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo-section">
+            <h1>SMU Student Hub</h1>
+
+        </div>
+    </nav>
+
+    <!-- DASHBOARD -->
+
+    <section class="student-area">
+
+        <img src="../files/logo.webp" class="student-logo" alt="logo" style="border-radius: 50%;">
+
+        <h2>SMU Student Center</h2>
+
+        <div class="card-container">
+
+            <div class="student-card">
+
+                <h3>Today's Timetable</h3>
+
+                <p>Check today's classes and lecture venues quickly.</p>
+                <a href="TIMETABLE.html" class="card-btn" onclick="playSound()">Access</a>
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>Study Resources</h3>
+
+                <p>Find academic support, videos and study materials.</p>
+                <a href="STUDYMATERIAL.html" class="card-btn" onclick="playSound()">Open</a>
+                
+
+                
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>Quick Links</h3>
+
+                <p>Open Blackboard, ITS, Library and school websites.</p>
+                <a href="QUICKLINKS.html" class="card-btn" onclick="playSound()">Visit</a>
+                </a>
+
+            
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>Campus Map</h3>
+
+                <p>Navigate lecture halls, offices and university buildings.</p>
+                <a href="OtherAreas.html" class="card-btn" onclick="playSound()">Open</a>
+                
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>Socials</h3>
+
+                <p>Access WhatsApp groups and social media pages.</p>
+                <a href="SOCIALLINKS.html" class="card-btn" onclick="playSound()">Connect</a>
+                
+
+        
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+
+            <h3>About Us</h3>
+
+            <p>
+                SMU Student Hub helps first-year students
+                navigate university life more easily.<br>LN Njapha<br>LL Lawana
+                <br>A Mtwa<br>Y Mkhosana
+                <br> K Mabojta
+            
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Emergency Contacts</h3>
+
+            <p>
+                Campus Security: 012 521 4111 <br>
+                Ambulance: 10177
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- AUDIO -->
+
+    <audio id="clickSound">
+
+        <source src="../files/click.wav" type="audio/mpeg">
+
+    </audio>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+function playSound(){
+    const sound = document.getElementById("clickSound");
+    sound.currentTime = 0; // restarts sound every click
+    sound.play();
+}
+</script>
+
+</body>
+
+</html>
